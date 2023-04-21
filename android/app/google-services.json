@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "594899742468",
+    "firebase_url": "https://tetststst-a1360-default-rtdb.firebaseio.com",
+    "project_id": "tetststst-a1360",
+    "storage_bucket": "tetststst-a1360.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594899742468:android:e71ca876f93bf949046a51",
+        "android_client_info": {
+          "package_name": "com.example.real_time_geriatric_health_care_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594899742468-bun67j0dnvnmja7vd9nclum0194k80s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHKRu3i4gZrdhpKKuNNY33xtTfPF64IWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594899742468-bun67j0dnvnmja7vd9nclum0194k80s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
