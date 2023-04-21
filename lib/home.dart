@@ -13,7 +13,8 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 class _HomeState extends State<Home> {
-   Query ref = FirebaseDatabase.instance.ref().child("Temperature");
+  FirebaseDatabase database = FirebaseDatabase.instance;
+
    Widget listItem({required Map da}) {
      return Container(
        margin: const EdgeInsets.all(10),
@@ -42,13 +43,7 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
-                child: FirebaseAnimatedList(query: ref, itemBuilder: (context,DataSnapshot snapshot,index,animetion){
-                  Map da = snapshot.value.toString() as Map;
-                return listItem(da:da);
-                },
-                ),
-              )
+
             ],
           ),
         ),
