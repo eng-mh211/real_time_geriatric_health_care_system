@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>594899742468-ulminbf2914k882q7h0g9euv4f468tde.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.594899742468-ulminbf2914k882q7h0g9euv4f468tde</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCFdk56A1KW7qFNI9FW3WknV370_RtRads</string>
+	<key>GCM_SENDER_ID</key>
+	<string>594899742468</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.realTimeGeriatricHealthCareSystem</string>
+	<key>PROJECT_ID</key>
+	<string>tetststst-a1360</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tetststst-a1360.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:594899742468:ios:d7fdeb75de5a7d1f046a51</string>
+	<key>DATABASE_URL</key>
+	<string>https://tetststst-a1360-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
