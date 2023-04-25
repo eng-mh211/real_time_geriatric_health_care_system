@@ -18,8 +18,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   DatabaseReference dbRef = FirebaseDatabase.instance.ref();
 
-  final TextEditingController _edtTmpController = TextEditingController();
-
   List<info> nodedatalist =[];
   @override
   void initState() {
