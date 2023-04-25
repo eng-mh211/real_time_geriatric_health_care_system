@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:real_time_geriatric_health_care_system/text_look/text_base.dart';
 import 'package:at_gauges/at_gauges.dart';
 
+import 'data/data.dart';
+
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -13,26 +16,17 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 class _HomeState extends State<Home> {
-  FirebaseDatabase database = FirebaseDatabase.instance;
+  DatabaseReference dbRef = FirebaseDatabase.instance.ref();
 
-   Widget listItem({required Map da}) {
-     return Container(
-       margin: const EdgeInsets.all(10),
-       padding: const EdgeInsets.all(10),
-       height: 110,
-       color: Colors.amberAccent,
-       child: Column(
-         mainAxisAlignment: MainAxisAlignment.center,
-         crossAxisAlignment: CrossAxisAlignment.start,
-         children: [
-           Text(
-             da['Temperature'],
-             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-           ),
-         ],
-       ),
-     );
-   }
+  final TextEditingController _edtTmpController = TextEditingController();
+
+  List<info> nodedatalist =[];
+  @override
+  void initState() {
+    super.initState();
+
+    retrieveNodeData();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,27 +37,38 @@ class _HomeState extends State<Home> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
+              for (int i = 0;i < nodedatalist.length;i++ )
+              temp(nodedatalist[i])
             ],
           ),
         ),
       ),
     );
   }
-}
-class box extends StatelessWidget {
-  const box({Key? key, this.values}) : super(key: key);
-  final values;
-  @override
-  Widget build(BuildContext context) {
-    return ScaleRadialGauge(
-      maxValue: 150,
-      actualValue: values,
-      size: 250,
-      titlePosition: TitlePosition.bottom,
-      title: Text("Temp"),
-      minValue: 0,
-      needleColor: Colors.red,
+  void retrieveNodeData() {
+    dbRef.child("Temperature").onChildAdded.listen((data) {
+      NodeData nodeData = NodeData.fromJson(data.snapshot.value as Map);
+      info user = info(key: data.snapshot.key, nodeData: nodeData);
+      nodedatalist.add(user);
+      setState(() {});
+    });
+
+  }
+
+  Widget temp(info nodedatalist){
+    return Container(
+      child:Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            children: [
+              Text(nodedatalist.nodeData!.Temperature!)
+            ],
+          )
+        ],
+      ),
     );
   }
 }
+
+

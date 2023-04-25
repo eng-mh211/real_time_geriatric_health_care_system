@@ -23,9 +23,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -61,27 +67,5 @@ class DefaultFirebaseOptions {
     projectId: 'tetststst-a1360',
     databaseURL: 'https://tetststst-a1360-default-rtdb.firebaseio.com',
     storageBucket: 'tetststst-a1360.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCFdk56A1KW7qFNI9FW3WknV370_RtRads',
-    appId: '1:594899742468:ios:d7fdeb75de5a7d1f046a51',
-    messagingSenderId: '594899742468',
-    projectId: 'tetststst-a1360',
-    databaseURL: 'https://tetststst-a1360-default-rtdb.firebaseio.com',
-    storageBucket: 'tetststst-a1360.appspot.com',
-    iosClientId: '594899742468-ulminbf2914k882q7h0g9euv4f468tde.apps.googleusercontent.com',
-    iosBundleId: 'com.example.realTimeGeriatricHealthCareSystem',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCFdk56A1KW7qFNI9FW3WknV370_RtRads',
-    appId: '1:594899742468:ios:d7fdeb75de5a7d1f046a51',
-    messagingSenderId: '594899742468',
-    projectId: 'tetststst-a1360',
-    databaseURL: 'https://tetststst-a1360-default-rtdb.firebaseio.com',
-    storageBucket: 'tetststst-a1360.appspot.com',
-    iosClientId: '594899742468-ulminbf2914k882q7h0g9euv4f468tde.apps.googleusercontent.com',
-    iosBundleId: 'com.example.realTimeGeriatricHealthCareSystem',
   );
 }
