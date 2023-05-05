@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "594899742468-2pm1sgfrihtsetvfinoglk85jq72pfh4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.real_time_geriatric_health_care_system",
+            "certificate_hash": "be0d814ad85f60df7b282fa974be563c619e578e"
+          }
+        },
+        {
           "client_id": "594899742468-bun67j0dnvnmja7vd9nclum0194k80s3.apps.googleusercontent.com",
           "client_type": 3
         }

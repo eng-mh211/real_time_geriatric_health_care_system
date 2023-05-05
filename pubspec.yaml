@@ -44,6 +44,8 @@ dependencies:
   firebase_database: ^10.0.16
   firebase_core: ^2.8.0
   flutter_native_splash: ^2.2.9
+  syncfusion_flutter_gauges: ^21.2.3
+
 
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen

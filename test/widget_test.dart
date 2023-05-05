@@ -13,7 +13,7 @@ import 'package:real_time_geriatric_health_care_system/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const proj());
+    await tester.pumpWidget(proj());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

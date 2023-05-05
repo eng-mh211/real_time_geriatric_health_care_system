@@ -15,6 +15,6 @@ class NodeData{
   NodeData.fromJson(Map<dynamic,dynamic> json){
     Temperature = json["Temperature"];
     BPM = json["BPM"];
-    AverageBPM = json["AverageBPM"];
+    AverageBPM = json["Average BPM"];
   }
 }
